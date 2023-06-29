@@ -2,58 +2,27 @@
 <html>
 <head>
   <title>Add Employee</title>
-  <style>
-    /* Add your CSS styles here */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-      padding: 20px;
-    }
-    
-    h1 {
-      color: #333333;
-    }
-    
-    form {
-      margin-top: 20px;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 5px;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 3px;
-      border: 1px solid #cccccc;
-    }
-    
-    button[type="submit"] {
-      background-color: #4CAF50;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-  </style>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-  <h1>Add Employee</h1>
-  <form action="/employees" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" name="name" required>
-    <label for="designation">Designation:</label>
-    <input type="text" name="designation" required>
-    <button type="submit">Add</button>
-  </form>
+  <div class="container">
+    <h1>Add Employee</h1>
+    <form action="/employees" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="designation">Designation:</label>
+        <input type="text" class="form-control" name="designation" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+  </div>
+
+  <!-- Add Bootstrap JS (Optional, if you need Bootstrap JavaScript features) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+</html>  
 </html>
