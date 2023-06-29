@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Employee List</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <style>
     /* CSS styles */
     body {
@@ -23,28 +25,28 @@
       margin-bottom: 10px;
     }
     
-    a {
+    .edit-btn,
+    .delete-btn {
       margin-left: 10px;
-      color: #333333;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Employee List</h1>
-  <ul>
-    <% employees.forEach((employee) => { %>
-      <li>
-        <strong><%= employee.name %></strong> - <%= employee.designation %>
-        <a href="/employees/<%= employee.id %>/edit">Edit</a>
-        <a href="/employees/<%= employee.id %>/delete">Delete</a>
-      </li>
-    <% }); %>
-  </ul>
-  <a href="/employees/add">Add Employee</a>
+  <div class="container">
+    <h1>Employee List</h1>
+    <ul>
+      <% employees.forEach((employee) => { %>
+        <li>
+          <strong><%= employee.name %></strong> - <%= employee.designation %>
+          <a href="/employees/<%= employee.id %>/edit" class="btn btn-primary edit-btn">Edit</a>
+          <a href="/employees/<%= employee.id %>/delete" class="btn btn-danger delete-btn">Delete</a>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="/employees/add" class="btn btn-success">Add Employee</a>
+  </div>
+
+  <!-- Add Bootstrap JS (Optional, if you need Bootstrap JavaScript features) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
